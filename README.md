@@ -19,7 +19,7 @@ A lightweight, protocol-oriented image downloading and caching SDK built with Sw
 ### Swift Package Manager (Source-Based)
 
 ```swift
-.package(url: "[https://github.com/yourusername/ImageDownloaderSDK.git](https://github.com/prachipb09/ImageCacherSDK.git)", from: "1.0.0")
+.package(url: "https://github.com/prachipb09/ImageCacherSDK.git", from: "1.0.0")
 ```
 
 Then import:
