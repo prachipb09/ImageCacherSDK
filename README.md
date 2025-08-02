@@ -94,21 +94,6 @@ Image(uiImage: loader.image ?? UIImage())
         loader.load(URL(string: "https://example.com/cat.png")!)
     }
 ```
-
 ---
 
-## 📘 Documentation
-
-To browse Apple-style documentation, open this package in Xcode and select **Product > Build Documentation**.
-
----
-
-## 🛠️ Contributing
-
-Contributions welcome! Please open issues or submit PRs.
-
----
-
-## 📄 License
-
-MIT License © 2025 Prachi Bharadwaj
+Prachi Bharadwaj
