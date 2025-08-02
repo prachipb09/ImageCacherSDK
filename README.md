@@ -68,6 +68,37 @@ protocol ImageLoading: ObservableObject {
 ```
 
 ---
+## 📦 ImagePrefetcher
+
+An actor-based concurrent image prefetcher that downloads images in advance using a max concurrency limit.
+
+```swift
+public actor ImagePrefetcher {
+    public static let shared: ImagePrefetcher
+    public init(downloader: ImageDownloading)
+    public func prefetch(_ urls: [URL]) async
+    public func cancel(_ urls: [URL]) async
+}
+```
+
+### Usage
+```swift
+await ImagePrefetcher.shared.prefetch([url1, url2])
+```
+
+## ⏱️ AsyncSemaphore
+
+An internal actor that limits the number of concurrent downloads using a semaphore-like mechanism.
+
+```swift
+actor AsyncSemaphore {
+    init(maxConcurrent: Int)
+    func wait() async
+    func signal() async
+}
+```
+
+Used internally by `ImagePrefetcher` to ensure at most `maxConcurrent` image downloads happen in parallel.
 
 ## 🧠 Default Implementations
 
